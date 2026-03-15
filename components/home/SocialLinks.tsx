@@ -1,14 +1,5 @@
 const socials = [
   {
-    label: "Framer",
-    href: "https://www.framer.com/marketplace/creator/pawel-gola?via=pawelgola",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4">
-        <path d="M4 0h16v8h-8zM4 8h8l8 8H4zM4 16h8v8z" />
-      </svg>
-    ),
-  },
-  {
     label: "Instagram",
     href: "https://www.instagram.com/gola.design/",
     icon: (

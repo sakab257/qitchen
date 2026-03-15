@@ -3,6 +3,7 @@ import { type NavLink, type FeatureCardData, type MenuCategoryData, type AwardDa
 export const navLinks: NavLink[] = [
   { label: "Menu", href: "/menu" },
   { label: "About", href: "/about" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export const featureCards: FeatureCardData[] = [

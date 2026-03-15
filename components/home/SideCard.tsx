@@ -7,15 +7,24 @@ import { motion } from "framer-motion"
 import { useState } from "react"
 import { FeatureCardData } from "@/lib/types"
 
-const SideCard = ({ title, href, image }: FeatureCardData) => {
+const MotionLink = motion.create(Link)
+
+interface SideCardProps extends FeatureCardData {
+    index?: number
+}
+
+const SideCard = ({ title, href, image, index = 0 }: SideCardProps) => {
     const [hovered, setHovered] = useState(false)
 
     return (
-        <Link
+        <MotionLink
             href={href}
-            className="group w-full md:w-1/3 xl:w-full min-h-62.5 md:min-h-75 xl:min-h-0 xl:h-1/3 rounded-2xl relative overflow-hidden block active:scale-96 transition-transform"
+            className="group w-full md:w-1/3 xl:w-full min-h-62.5 md:min-h-75 xl:min-h-0 xl:h-1/3 rounded-2xl relative overflow-hidden block active:scale-96 active:transition-transform"
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: 0.1 + index * 0.15 }}
         >
             <Image
                 src={image}
@@ -72,7 +81,7 @@ const SideCard = ({ title, href, image }: FeatureCardData) => {
                     </div>
                 </div>
             </div>
-        </Link>
+        </MotionLink>
     );
 };
 
