@@ -8,7 +8,7 @@ import SplitText from "@/components/ui/SplitText"
 const HomeHero = () => {
     return (
         // Changement : flex flex-col sur mobile, grid sur XL
-        <main className="relative p-4 flex flex-col xl:grid xl:grid-cols-15 min-h-screen gap-4 bg-bg lg:overflow-hidden">
+        <main className="relative p-4 flex flex-col xl:grid xl:grid-cols-15 min-h-screen gap-4 bg-bg xl:overflow-hidden">
             
             {/* SECTION VIDÉO : 70% de hauteur sur mobile/tablette, full screen sur XL */}
             <div className="relative overflow-hidden w-full h-[70vh] xl:h-[calc(100vh-2rem)] xl:col-span-11 rounded-2xl">
@@ -27,7 +27,7 @@ const HomeHero = () => {
                     <SplitText
                         text="Sushi Sensation"
                         tag="h1"
-                        className="text-center md:text-left font-forum uppercase leading-[80%] text-cream text-[clamp(2.5rem,10vw,8rem)]"
+                        className="text-center w-150 md:text-left font-forum uppercase leading-[80%] text-cream text-[clamp(2.5rem,10vw,8rem)]"
                         textAlign="left"
                         splitType="chars"
                         delay={40}

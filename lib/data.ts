@@ -2,8 +2,15 @@ import { type NavLink, type FeatureCardData, type MenuCategoryData, type AwardDa
 
 export const navLinks: NavLink[] = [
   { label: "Menu", href: "/menu" },
-  { label: "About", href: "/about" },
+  { label: "à propos", href: "/about" },
   { label: "Contact", href: "/contact" },
+];
+
+export const mobileNavLinks: NavLink[] = [
+  { label: "Menu", href: "/menu" },
+  { label: "à propos", href: "/about" },
+  { label: "Contact", href: "/contact" },
+  { label: "Réservation", href: "/reservation" },
 ];
 
 export const featureCards: FeatureCardData[] = [
@@ -18,7 +25,7 @@ export const featureCards: FeatureCardData[] = [
     image: "/images/card-reservation.webp",
   },
   {
-    title: "Our Restaurant",
+    title: "Notre Restaurant",
     href: "/about",
     image: "/images/card-restaurant.webp",
   },

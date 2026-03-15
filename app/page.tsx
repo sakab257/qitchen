@@ -1,8 +1,10 @@
 import HomeHero from "@/components/home/HomeHero";
-import Image from "next/image";
 
 export default function Home() {
   return (
-    <HomeHero />
+    <>
+      <HomeHero />
+      <div className="xl:hidden w-full h-20 bg-red-400"></div>
+    </>
   );
 }
