@@ -26,7 +26,7 @@ const MenuItem = ({ item, index }: { item: MenuItemData; index: number }) => {
 
             <div className="flex-1 min-w-0">
                 <div className="flex items-baseline gap-2">
-                    <h3 className="font-forum text-cream uppercase text-base md:text-lg tracking-wide whitespace-nowrap">
+                    <h3 className="font-forum text-cream uppercase text-[11px] md:text-lg tracking-wide whitespace-nowrap">
                         {item.name}
                     </h3>
                     {item.dietary === "vegetarian" && (

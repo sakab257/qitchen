@@ -10,7 +10,7 @@ const MenuNav = () => {
     }
 
     return (
-        <nav className="flex items-center justify-center gap-3 flex-wrap sticky top-0 z-10 bg-bg/80 backdrop-blur-sm py-3 -mx-4 px-4">
+        <nav className="flex items-center justify-center gap-2 md:gap-3 sticky top-0 z-10 bg-bg/80 backdrop-blur-sm py-3 -mx-4 px-4">
             {menuCategories.map((cat) => (
                 <a
                     key={cat.id}

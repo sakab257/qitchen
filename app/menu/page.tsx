@@ -9,7 +9,7 @@ const MenuPage = () => {
         <>
             <PageWrapper image={heroImages.menu} alt="Image Hero Du Menu" title="Menu">
                 <div className="flex flex-col gap-4">
-                    <div className="flex flex-col gap-10 py-6 px-20 border-border border rounded-2xl">
+                    <div className="flex flex-col gap-10 py-6 px-4 md:px-10 lg:px-20 border-border border rounded-2xl">
                         <MenuNav />
                         {menuCategories.map((category) => (
                             <MenuCategory key={category.id} category={category} />
