@@ -6,6 +6,7 @@ import { ArrowRight } from "lucide-react"
 import { motion } from "framer-motion"
 import { useState } from "react"
 import { FeatureCardData } from "@/lib/types"
+import InverseBadge from "@/components/ui/InverseBadge"
 
 const MotionLink = motion.create(Link)
 
@@ -34,25 +35,8 @@ const SideCard = ({ title, href, image, index = 0 }: SideCardProps) => {
             />
             <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent" />
 
-            {/* Badge avec arrondis inversés */}
-            <div className="absolute bottom-0 right-0 bg-bg p-2.5 pl-4 pt-4 rounded-tl-3xl">
-                {/* Arrondi inversé HAUT */}
-                <svg
-                    className="absolute -top-6 right-0 w-6 h-6 fill-bg pointer-events-none"
-                    viewBox="0 0 40 40"
-                >
-                    <path d="M40 0L40 40L0 40A40 40 0 0 0 40 0Z" />
-                </svg>
-
-                {/* Arrondi inversé GAUCHE */}
-                <svg
-                    className="absolute bottom-0 -left-6 w-6 h-6 fill-bg pointer-events-none"
-                    viewBox="0 0 40 40"
-                >
-                    <path d="M40 0L40 40L0 40A40 40 0 0 0 40 0Z" />
-                </svg>
-
-                <div className="flex items-center gap-1.5">
+            <InverseBadge className="absolute bottom-0 right-0">
+                <div className="flex items-center gap-1.5 pr-2.5 pb-2.5 pl-4 pt-4">
                     {/* Titre — roulement Y */}
                     <div className="overflow-hidden relative h-[1.2em]">
                         <motion.div
@@ -80,7 +64,7 @@ const SideCard = ({ title, href, image, index = 0 }: SideCardProps) => {
                         </motion.div>
                     </div>
                 </div>
-            </div>
+            </InverseBadge>
         </MotionLink>
     );
 };
