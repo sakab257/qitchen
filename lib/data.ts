@@ -1,4 +1,4 @@
-import { type NavLink, type FeatureCardData, type MenuCategoryData, type AwardData } from "./types";
+import { type NavLink, type FeatureCardData, type MenuCategoryData, type AwardData, type AvisData } from "./types";
 
 export const navLinks: NavLink[] = [
   { label: "Menu", href: "/menu" },
@@ -159,6 +159,49 @@ export const awards: AwardData[] = [
   { title: "Start Dining", subtitle: "Cool Vibe" },
 ];
 
+export const avis: AvisData[] = [
+  {
+    name: "Marie L.",
+    text: "Une expérience inoubliable. Les sushis sont d'une fraîcheur incroyable et le service est impeccable.",
+    rating: 5,
+  },
+  {
+    name: "Thomas D.",
+    text: "Le meilleur restaurant japonais de la ville. L'ambiance est raffinée et les plats sont de véritables œuvres d'art.",
+    rating: 5,
+  },
+  {
+    name: "Sophie M.",
+    text: "Cadre magnifique, saveurs authentiques. On sent la passion du chef dans chaque bouchée. Je recommande vivement.",
+    rating: 5,
+  },
+  {
+    name: "Lucas R.",
+    text: "Un vrai voyage culinaire au Japon. Chaque plat est préparé avec une précision remarquable. On y retourne sans hésiter.",
+    rating: 5,
+  },
+  {
+    name: "Camille B.",
+    text: "L'endroit parfait pour une soirée spéciale. Le dragon roll est une merveille absolue.",
+    rating: 4,
+  },
+  {
+    name: "Julien P.",
+    text: "Service attentionné et plats d'exception. Le chef sait sublimer chaque ingrédient avec finesse.",
+    rating: 5,
+  },
+  {
+    name: "Emma V.",
+    text: "Ambiance intime et élégante. Les rolls spéciaux valent vraiment le détour, une explosion de saveurs.",
+    rating: 5,
+  },
+  {
+    name: "Antoine G.",
+    text: "Probablement les meilleurs makis que j'ai goûtés. Produits ultra frais et présentation soignée.",
+    rating: 4,
+  },
+];
+
 export const heroImages = {
   homeVideo: "/images/hero-home-video.mp4",
   menu: "/images/hero-menu.webp",
@@ -177,3 +220,25 @@ export const aboutImages = {
   slider2_3: "/images/about/about-slider2-3.webp",
   story: "/images/about/about-hero.webp",
 };
+
+export const contactInfo = {
+  address: ["45 Avenue des Champs-Élysées", "75008 Paris"],
+  phone: "+33 1 23 45 67 89",
+  email: "info@qitchen.com",
+};
+
+export const openingHours = [
+  { day: "Lun", hours: "16:00 - 22:30" },
+  { day: "Mar", hours: "16:00 - 22:30" },
+  { day: "Mer", hours: "16:00 - 22:30" },
+  { day: "Jeu", hours: "16:00 - 22:30" },
+  { day: "Ven", hours: "16:00 - 22:30" },
+  { day: "Sam & Dim", hours: "16:00 - 22:30" },
+];
+
+export const contactImages = [
+  "/images/contact/contact1.webp",
+  "/images/contact/contact2.webp",
+  "/images/contact/contact3.webp",
+  "/images/contact/contact4.webp",
+];

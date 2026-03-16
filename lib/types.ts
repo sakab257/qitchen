@@ -27,3 +27,9 @@ export interface AwardData {
   title: string;
   subtitle: string;
 }
+
+export interface AvisData {
+  name: string;
+  text: string;
+  rating: number;
+}
