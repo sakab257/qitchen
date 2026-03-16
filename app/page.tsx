@@ -1,13 +1,12 @@
 import HomeHero from "@/components/home/HomeHero";
+import Footer from "@/components/ui/Footer";
 
 export default function Home() {
   return (
     <>
       <HomeHero />
-      <div className="p-4">
-          <footer className="xl:hidden w-full py-4 text-center text-cream/40 text-sm font-satoshi uppercase border border-gold/40 rounded-md">
-            © 2026 | Créé par <span className="font-bold">SAKAB</span>
-          </footer>
+      <div className="p-4 xl:hidden">
+          <Footer />
       </div>
     </>
   );

@@ -6,7 +6,7 @@ import MobileMenu from "@/components/navigation/MobileMenu"
 
 const Navbar = () => {
     return (
-        <nav className="absolute top-8 left-8 right-8 z-50 flex items-center w-fit p-2 bg-bg rounded-xl mx-auto md:mx-0 gap-2">
+        <nav className="absolute lg:fixed top-8 left-8 right-8 z-50 flex items-center w-fit p-2 bg-bg rounded-xl mx-auto md:mx-0 gap-2">
             <MobileMenu />
             <Link href="/">
                 <Image src="/images/logo-qitchen.webp" alt="Logo Qitchen" width={500} height={500} className="w-16 md:w-20 xl:w-24 h-auto"/>

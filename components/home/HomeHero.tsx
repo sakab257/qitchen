@@ -23,9 +23,9 @@ const HomeHero = () => {
                 <div className="absolute inset-0 bg-linear-to-t from-bg/60 via-transparent to-transparent" />
 
                 {/* TITRE : Centré sur petit mobile, à gauche dès md */}
-                <div className="absolute bottom-6 left-1/2 -translate-x-1/2 md:translate-x-0 md:bottom-8 md:left-8 xl:bottom-12 xl:left-12 w-full px-6 md:px-0">
+                <div className="absolute bottom-6 left-1/2 -translate-x-1/2 md:translate-x-0 md:bottom-8 md:left-8 xl:bottom-12 xl:left-12 w-full px-6 md:px-0 overflow-hidden">
                     <SplitText
-                        text="Sushi Sensation"
+                        text="Sushi"
                         tag="h1"
                         className="text-center w-150 md:text-left font-forum uppercase leading-[80%] text-cream text-[clamp(2.5rem,10vw,8rem)]"
                         textAlign="left"

@@ -19,7 +19,7 @@ const SideCard = ({ title, href, image, index = 0 }: SideCardProps) => {
     return (
         <MotionLink
             href={href}
-            className="group w-full md:w-1/3 xl:w-full min-h-62.5 md:min-h-75 xl:min-h-0 xl:h-1/3 rounded-2xl relative overflow-hidden block active:scale-96 active:transition-transform"
+            className="group w-full md:w-1/3 xl:w-full min-h-62.5 md:min-h-75 xl:min-h-0 xl:h-1/3 rounded-2xl relative overflow-hidden block"
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
             initial={{ opacity: 0, y: 30 }}
