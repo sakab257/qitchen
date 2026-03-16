@@ -3,8 +3,9 @@
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X, Minus } from "lucide-react"
-import Link from "next/link"
-import { mobileNavLinks, navLinks } from "@/lib/data"
+import { mobileNavLinks } from "@/lib/data"
+import RollingLink from "@/components/ui/RollingLink"
+import Divider from "@/components/ui/Divider"
 
 const useIsDesktop = () => {
     const [isDesktop, setIsDesktop] = useState(false)
@@ -66,6 +67,16 @@ const MobileMenu = () => {
 
             <AnimatePresence>
                 {isOpen && (
+                    <>
+                    {/* Backdrop sombre */}
+                    <motion.div
+                        className="fixed inset-0 z-99 bg-black/80"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.3 }}
+                        onClick={() => setIsOpen(false)}
+                    />
                     <motion.div
                         className="fixed inset-0 z-100 bg-bg flex flex-col items-center justify-center m-4 border border-cream/20 rounded-2xl"
                         initial={{ opacity: 0, scale: 0.95 }}
@@ -112,6 +123,7 @@ const MobileMenu = () => {
                         </motion.button>
 
                         <nav className="flex flex-col items-center gap-8">
+                            <Divider lineWidth={150} diamondSize={10} />
                             {mobileNavLinks.map((link, i) => (
                                 <motion.div
                                     key={link.label}
@@ -123,18 +135,19 @@ const MobileMenu = () => {
                                         delay: 0.2 + i * 0.1,
                                     }}
                                 >
-                                    <Link
+                                    <RollingLink
                                         href={link.href}
+                                        label={link.label}
+                                        className="font-forum text-cream uppercase text-5xl md:text-7xl tracking-wide"
                                         onClick={() => setIsOpen(false)}
-                                        className="font-forum text-cream uppercase text-5xl md:text-7xl tracking-wide hover:text-gold transition-colors block"
-                                    >
-                                        {link.label}
-                                    </Link>
+                                    />
                                 
                                 </motion.div>
                             ))}
+                            <Divider lineWidth={150} diamondSize={10} />
                         </nav>
                     </motion.div>
+                    </>
                 )}
             </AnimatePresence>
         </>
