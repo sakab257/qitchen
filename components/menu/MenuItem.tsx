@@ -9,10 +9,10 @@ const MenuItem = ({ item, index }: { item: MenuItemData; index: number }) => {
     return (
         <motion.div
             className="flex gap-4 items-start"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false, amount: 0.3 }}
-            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1], delay: index * 0.05 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.5, delay: index * 0.05 }}
         >
             <div className="w-24 h-18 md:w-28 md:h-20 rounded-lg overflow-hidden shrink-0 relative">
                 <Image
