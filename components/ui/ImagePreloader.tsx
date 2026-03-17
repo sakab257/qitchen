@@ -46,7 +46,7 @@ const ImagePreloader = () => {
                 const img = new Image()
                 img.src = src
             })
-        }, 1000)
+        }, 2000)
 
         return () => clearTimeout(timeout)
     }, [])
