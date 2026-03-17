@@ -153,12 +153,6 @@ export const menuCategories: MenuCategoryData[] = [
   },
 ];
 
-export const awards: AwardData[] = [
-  { title: "Trip Advisor", subtitle: "Best Sushi" },
-  { title: "Michelin Guide", subtitle: "Quality Food" },
-  { title: "Start Dining", subtitle: "Cool Vibe" },
-];
-
 export const avis: AvisData[] = [
   {
     name: "Marie L.",
