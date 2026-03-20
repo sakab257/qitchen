@@ -20,8 +20,10 @@ const InverseBadge = ({ children, className }: { children: React.ReactNode; clas
 
     const r = 14
     const k = r * 0.5523
-    const W = size.w + r
-    const H = size.h + r
+    // Add 1px overflow to eliminate sub-pixel gaps
+    const o = 1
+    const W = size.w + r + o
+    const H = size.h + r + o
 
     return (
         <div className={className}>
@@ -31,13 +33,13 @@ const InverseBadge = ({ children, className }: { children: React.ReactNode; clas
                     width={W}
                     height={H}
                     viewBox={`0 0 ${W} ${H}`}
-                    style={{ bottom: 0, right: 0 }}
+                    style={{ bottom: -o, right: -o }}
                 >
                     {/* Bottom-left inverse corner */}
-                    <path d={`M${r} ${H - r}C${r} ${H - r + k} ${k} ${H} 0 ${H}V${H}H${r + 20}V${H - r - 5}H${r}Z`} />
+                    <path d={`M${r} ${H - r - o}C${r} ${H - r - o + k} ${k} ${H - o} 0 ${H - o}V${H}H${r + 20}V${H - r - 5 - o}H${r}Z`} />
                     {/* Top-right inverse corner */}
-                    <path d={`M${W - r} ${r}C${W - r + k} ${r} ${W} ${k} ${W} 0H${W}V${r + 20}H${W - r - 5}V${r}Z`} />
-                    {/* Main shape: rounded top-left + bottom-right, sharp top-right + bottom-left */}
+                    <path d={`M${W - r - o} ${r}C${W - r - o + k} ${r} ${W - o} ${k} ${W - o} 0H${W}V${r + 20}H${W - r - 5 - o}V${r}Z`} />
+                    {/* Main shape: rounded top-left, sharp others */}
                     <path d={`
                         M${r} ${r + 24}
                         Q${r} ${r} ${r + 24} ${r}
